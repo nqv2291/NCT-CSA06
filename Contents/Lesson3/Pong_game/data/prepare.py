@@ -20,5 +20,5 @@ path_ball = "resources/images/Ball.png"
 # Object speed
 speed_player = 5
 speed_virtual_player = 5
-speed_ball_x = 5
-speed_ball_y = 5
+speed_ball_x = 7
+speed_ball_y = 7

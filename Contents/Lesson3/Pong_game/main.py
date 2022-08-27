@@ -1,20 +1,26 @@
-import pygame, sys
+import pygame
 
-from prepare import *
+from data.prepare import *
+from data.game_objects import *
+from data.game_controller import Controller
 
+# initial setup
 pygame.init()
 
-screen = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption(caption)
-clock = pygame.time.Clock()
+controller = Controller()
+
+ball = Ball()
+p1 = Paddle(speed_player)
+p2 = Paddle(speed_player)
+
+controller.set_objects(ball, p1, p2)
+
 
 while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
     
-    screen.fill((255, 255, 255))
+    controller.check_events()
+    controller.draw_screen()
+    controller.update()
     
-    pygame.display.flip()
-    clock.tick(60)
+    
+
