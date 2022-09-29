@@ -1,0 +1,2 @@
+SELECT DISTINCT CITY
+FROM Customers
