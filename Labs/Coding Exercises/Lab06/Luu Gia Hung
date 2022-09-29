@@ -1,0 +1,20 @@
+Use NorthwindFullData
+select * from dbo.Customers where Country = 'Mexico'
+
+SELECT DISTINCT Country FROM Customers
+
+Select * FROM Customers Where Country In ('Mexico', 'Canada', ' USA')
+
+select * from Customers where Country = 'USA' 
+
+select ProductName as Name , Unit from Products
+ 
+Select * from Products order by Price asc
+
+select top 5 * from Products where Category like 'beverages'  order by Price desc 
+
+select * from Products where Price between 10 and 25 and Unit like '%boxes%' 
+
+select * from Orders where OrderDate like '1996-08%'
+
+select ProductID, Quantity from OrderDetails where quantity > 10
