@@ -38,4 +38,6 @@ HAVING COUNT(OrderID)>10
 SELECT ProductID,  SUM(Quantity) AS TotalItems
 FROM OrderDetails
 
+
+
 upcheck123456
