@@ -30,5 +30,12 @@ FROM Orders
 GROUP BY CustomerID
 ORDER BY COUNT(OrderID) DESC
 
+SELECT ProductID, COUNT(OrderID) AS Ordered 
+FROM OrderDetails 
+GROUP BY ProductID 
+HAVING COUNT(OrderID)>10
 
-check12456
+SELECT ProductID,  SUM(Quantity) AS TotalItems
+FROM OrderDetails
+
+upcheck123456
